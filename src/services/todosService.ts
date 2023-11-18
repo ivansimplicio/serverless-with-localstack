@@ -25,7 +25,7 @@ export class TodosService {
     const todo = await this.docClient.get({
       TableName: this.TableName,
       Key: {
-        todosId: id
+        id
       }
     }).promise()
     if (!todo.Item) {
@@ -38,7 +38,7 @@ export class TodosService {
     const updated = await this.docClient
       .update({
         TableName: this.TableName,
-        Key: { todosId: id },
+        Key: { id },
         UpdateExpression:
           'set #status = :status',
         ExpressionAttributeNames: {
@@ -56,7 +56,7 @@ export class TodosService {
     return await this.docClient.delete({
       TableName: this.TableName,
       Key: {
-        todosId: id
+        id
       }
     }).promise()
   }    

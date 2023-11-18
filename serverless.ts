@@ -66,11 +66,11 @@ const serverlessConfiguration: AWS = {
         Properties: {
           TableName: 'TodosTable',
           AttributeDefinitions: [{
-            AttributeName: 'todosId',
+            AttributeName: 'id',
             AttributeType: 'S',
           }],
           KeySchema: [{
-            AttributeName: 'todosId',
+            AttributeName: 'id',
             KeyType: 'HASH'
           }],
           ProvisionedThroughput: {
