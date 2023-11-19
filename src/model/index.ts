@@ -8,5 +8,10 @@ export const dynamoDBClient = (): DocumentClient => {
       endpoint: 'http://localhost:5000',
     });
   }
-  return new AWS.DynamoDB.DocumentClient();
+
+  const LOCALSTACK_HOSTNAME = process.env.LOCALSTACK_HOSTNAME;
+  const ENDPOINT = `http://${LOCALSTACK_HOSTNAME}:4566`;
+  const CLIENT_CONFIG = LOCALSTACK_HOSTNAME ? { endpoint: ENDPOINT } : {};
+
+  return new AWS.DynamoDB.DocumentClient(CLIENT_CONFIG);
 };
