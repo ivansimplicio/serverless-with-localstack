@@ -5,7 +5,7 @@ import { createTodo, getTodo, getAllTodos, updateTodo, deleteTodo } from '@funct
 const serverlessConfiguration: AWS = {
   service: 'serverless-with-localstack',
   frameworkVersion: '3',
-  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dynamodb'],
+  plugins: ['serverless-esbuild', 'serverless-offline', 'serverless-dynamodb', 'serverless-localstack'],
   provider: {
     name: 'aws',
     runtime: 'nodejs14.x',
@@ -57,6 +57,11 @@ const serverlessConfiguration: AWS = {
         migrate: true,
       },
       stages: 'dev'
+    },
+    localstack: {
+      stages: ['local'],
+      host: 'http://127.0.0.1',
+      debug: true
     }
   },
   resources: {

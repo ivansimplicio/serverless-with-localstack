@@ -1551,7 +1551,7 @@ acorn@^8.4.1, acorn@^8.8.1:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.11.2.tgz"
   integrity sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==
 
-adm-zip@^0.5.5:
+adm-zip@^0.5.10, adm-zip@^0.5.5:
   version "0.5.10"
   resolved "https://registry.npmjs.org/adm-zip/-/adm-zip-0.5.10.tgz"
   integrity sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==
@@ -1750,7 +1750,7 @@ aws-dynamodb-local@^0.0.11:
   dependencies:
     tar "^6.2.0"
 
-aws-sdk@^2.1404.0:
+aws-sdk@^2.1404.0, aws-sdk@^2.402.0:
   version "2.1499.0"
   resolved "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.1499.0.tgz"
   integrity sha512-kh89lcXx7lP83uVjzRPkOueRoM8gQlep86W9+l3qCTHSLiVJuc0MiPmqCLMPlOAZil+35roFkwWIP2FJ1WcdXg==
@@ -2434,6 +2434,11 @@ es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     d "1"
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
+
+es6-promisify@^6.0.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-6.1.1.tgz#46837651b7b06bf6fff893d03f29393668d01621"
+  integrity sha512-HBL8I3mIki5C1Cc9QjKUenHtnG0A5/xA8Q/AllRcfiwl2CZFXGK7ddBiCoRwAix4i2KxcQfjtIVcrVbB3vbmwg==
 
 es6-set@^0.1.6:
   version "0.1.6"
@@ -4289,6 +4294,15 @@ serverless-esbuild@^1.23.3:
     p-map "^4.0.0"
     ramda "^0.28.0"
     semver "^7.3.8"
+
+serverless-localstack@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/serverless-localstack/-/serverless-localstack-1.1.2.tgz#01b53ad3c4067637ff1a08a860cb50aafd6e478c"
+  integrity sha512-62YN9icC9x7t1lmN8MC4v++jB13to19Z98OZfBjsswiU/Co3DrELUmAgiwGgE+f1RUDRpmtxu9T3cN2T05aGsQ==
+  dependencies:
+    adm-zip "^0.5.10"
+    aws-sdk "^2.402.0"
+    es6-promisify "^6.0.1"
 
 serverless-offline@^13.3.0:
   version "13.3.0"
