@@ -64,3 +64,7 @@ Finally, to remove the AWS functions, use:
 ```bash
 yarn sls:remove or serverless remove
 ```
+
+## Import the collection into Insomnia
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=serverless-with-localstack&uri=https%3A%2F%2Fgithub.com%2Fivansimplicio%2Fserverless-with-localstack%2Fblob%2Fmain%2Ffiles%2Fworkspace-serverless-with-localstack.json)
